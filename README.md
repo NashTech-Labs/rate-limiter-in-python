@@ -1,3 +1,6 @@
+# Rate Limiter in Python
+Python rate limiter is an utility program to prevent the frequency of an operation from exceeding some defined constraint. At an enterprise level application rate limiter is commonly used to protect underlying services and resources. </br>
+
 # Prerequisite
 ```
 Python3
@@ -24,8 +27,20 @@ Again take a pause of 5 seconds and resend request, it should give a response. <
 ![image](https://user-images.githubusercontent.com/76727343/216787908-3969fbed-e14a-4eb1-a174-751643f92cbd.png)
 </br>
 Idea is, within 5 seconds it can have at max 3 request, more than 3 would not be entertained. </br>
+----
+### Why use rate limiter?
+- Used as a defensive measure for the shared services to stop themselves from excessive use, it could be intended/unintended in order to maintain service availability.
+- Even though your system is highly available, you should have limits on consumption at some level.
+- Rate limiting helps to ensure API-based services to be highly available by reducing chances of failures due to resource failure.
+- Rate limiting could be applied at client side as well as server side to ensure maximum throughput and minimum latency accross large distributed systems.
+- Useful to avoid resource starvation it could be intentional or unintentional.
+    - intentional could be friendly-fire DDoS
+    - unintentional could be DDoS
 
+### How Rate limiting is applied in real time?
+- It is applied by the service just before the contrained resource, with some resource usage limit margin.
 
-Python rate limiter is an utility program to prevent the frequency of an operation from exceeding some defined constraint. At an enterprise level application rate limiter is commonly used to protect underlying services and resources.
-
-
+### Use cases
+- Managing policies and quotas
+- Controlling Flow
+- Avoid excess cost
