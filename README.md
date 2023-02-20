@@ -26,7 +26,8 @@ Again take a pause of 5 seconds and resend request, it should give a response. <
 </br>
 ![image](https://user-images.githubusercontent.com/76727343/216787908-3969fbed-e14a-4eb1-a174-751643f92cbd.png)
 </br>
-Idea is, within 5 seconds it can have at max 3 request, more than 3 would not be entertained. </br>
+
+Idea is, within 5 seconds it can have at max 3 request, more than 3 would not be processed. </br>
 ----
 ### Why use rate limiter?
 - Used as a defensive measure for the shared services to stop themselves from excessive use, it could be intended/unintended in order to maintain service availability.
